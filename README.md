@@ -20,8 +20,8 @@ This site is deployed using GitHub Pages.
 
 To run locally:
 
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio/frontend
+git clone https://github.com/april-hpxd/april-hpxd.github.io
+cd april-hpxd.github.io/frontend
 open index.html
 
 (the backend folder is not required for deployment)
