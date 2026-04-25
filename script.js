@@ -27,6 +27,7 @@ sections.forEach(section => {
 const modal = document.getElementById('image-modal');
 const modalImg = document.getElementById('modal-image');
 const trackImgs = document.querySelectorAll('.track-img');
+const hackImgs = document.querySelectorAll('.hack-img');
 
 trackImgs.forEach(img => {
   img.addEventListener('click', () => {
