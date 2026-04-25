@@ -202,6 +202,11 @@ section {
     width: 150px;
     height: auto;
   }
+
+  .hack-images img {
+    width: 150px;
+    height: auto;
+  }
 }
 
 .timeline .event h3 {
@@ -224,6 +229,21 @@ section {
 }
 
 .track-images img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(96, 60, 27, 0.15);
+}
+
+.hack-images {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+.hack-images img {
   width: 150px;
   height: 100px;
   object-fit: cover;

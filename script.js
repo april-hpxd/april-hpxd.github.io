@@ -35,6 +35,14 @@ trackImgs.forEach(img => {
   });
 });
 
+hackImgs.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.dataset.src;
+  });
+});
+
+
 modal.addEventListener('click', (e) => {
   if (e.target === modal) {
     modal.style.display = 'none';
