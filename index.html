@@ -3,176 +3,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Altynai's Chaotic Corner</title>
+  <title>Altynai's Chaotic Corner ✦</title>
+  <meta name="description" content="Altynai Ruslanova — CS & Biology student at Knox College. Cozy, slightly chaotic corner of the internet with projects, quests, and questionable amounts of caffeine." />
+
+  <!-- Fonts: Comfortaa keeps the cozy feel; Silkscreen + VT323 add the pixel/terminal flavor -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="cursor"></div>
+  <!-- custom cozy cursor + trailing sparkle (desktop only, JS-managed) -->
+  <div class="cursor" aria-hidden="true"></div>
 
-  <div class="gif-background"></div>
+  <!-- floating decorative sprites live here so they never affect layout -->
+  <div class="gif-background" aria-hidden="true"></div>
+  <div class="doodle-field" aria-hidden="true"></div>
 
-  <main class="page-content">
-    <section class="hero">
+  <!-- tiny pixel nav that follows you around -->
+  <nav class="pixel-nav" aria-label="Primary">
+    <a href="#top" class="nav-brand">✦ altynai</a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#quests">quests</a>
+      <a href="#skills">skills</a>
+      <a href="#lore">lore</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <main class="page-content" id="top">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero">
       <div class="intro">
         <div class="intro-text">
-          <h1>Hi, I'm Altynai Ruslanova ✨</h1>
-          <p>Reliable, compassionate, and quick-learning student with a strong sense of responsibility.</p>
+          <p class="kicker">✦ welcome to my corner of the internet ✦</p>
+          <h1>Hi, I'm Altynai Ruslanova</h1>
+          <p class="tagline">CS &amp; Biology double major, part-time bug creator → full-time bug fixer.</p>
+
+          <!-- little terminal card: pure vibes -->
+          <div class="terminal" role="img" aria-label="A pretend terminal describing Altynai">
+            <div class="terminal-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">altynai@knox: ~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="out">student · researcher · sprinter · perpetual learner</p>
+              <p><span class="prompt">$</span> status --now</p>
+              <p class="out">Current side quest: <span class="blink">surviving college_</span></p>
+              <p><span class="prompt">$</span> fuel --check</p>
+              <p class="out">Powered by caffeine and Stack Overflow ☕</p>
+            </div>
+          </div>
+
+          <div class="hero-links">
+            <a class="pill-btn" href="#projects">✦ see my builds</a>
+            <a class="pill-btn ghost" href="https://github.com/april-hpxd" target="_blank" rel="noopener">⌨ GitHub</a>
+            <a class="pill-btn ghost" href="https://www.linkedin.com/in/altynai-ruslanova-987730273/" target="_blank" rel="noopener">in LinkedIn</a>
+          </div>
         </div>
-        <img src="assets/profile_face.png" alt="Profile Picture" class="profile-face" />
+
+        <div class="portrait-wrap">
+          <img src="assets/profile_face.png" alt="Illustrated portrait of Altynai" class="profile-face"
+               width="520" height="520" fetchpriority="high" decoding="async" />
+          <span class="tape tape-tl"></span>
+          <span class="sticky-note note-hero">hi it's me! ✦</span>
+        </div>
       </div>
     </section>
 
-    <img src="assets/profile_side.png" alt="Side Profile" class="side-profile" />
-
-    <section class="education">
-      <h2>Education</h2>
-      <p><strong>Bachelor of Science: Computer Science & Biology</strong></p>
-      <p>Knox College, Galesburg, IL | 2024 - June 2028</p>
-      <p>Honors: Dean's List</p>
+    <!-- ============================ ABOUT ============================ -->
+    <section class="about" id="about">
+      <h2><span class="h-badge">01</span> about me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Reliable, compassionate, quick-learning student with a chronic habit of signing up for
+          too many things at once. I love the exact moment a confusing concept finally clicks — which
+          is convenient, because I've picked two majors that hand out those moments constantly.</p>
+          <p>When I'm not debugging, I'm sprinting on the track, poking at biology, or teaching someone
+          that yes, you <em>do</em> have to save the file first.</p>
+          <p class="whisper">Ctrl + Z unfortunately doesn't work in real life. Believe me, I've tried.</p>
+        </div>
+        <ul class="fun-facts">
+          <li><span>🏃‍♀️</span> NCAA sprinter (60m / 100m / 200m)</li>
+          <li><span>🧬</span> Fluent in Python <em>and</em> mitochondria</li>
+          <li><span>🗣️</span> Speaks Russian, Kyrgyz &amp; English</li>
+          <li><span>🏆</span> First hackathon → first place. No pressure for the next one.</li>
+          <li><span>☕</span> Blood type: probably espresso</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="experience">
-      <h2>Student Experience</h2>
-      <div class="timeline">
-        <div class="event">
-          <h3>Volunteer Leader</h3>
-          <p>Interact Club of Bishkek, Kyrgyzstan | 2022 - June 2024</p>
-          <p>Co-led the planning and execution of five large-scale charity competitions, coordinating teams, managing logistics, and ensuring smooth event operations.</p>
-          <p>Organized three community clean-up initiatives with over 50 participants each, promoting environmental awareness and teamwork.</p>
-          <p>Delivered interactive ecology lectures in local schools, adapting complex environmental topics into engaging and accessible presentations for younger students.</p>
-          <p>Developed leadership, communication, and event coordination skills while contributing to community impact.</p>
+    <!-- ============================ EDUCATION ============================ -->
+    <section class="education" id="education">
+      <h2><span class="h-badge">02</span> education</h2>
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <h3>B.S. Computer Science &amp; B.A. Biology</h3>
+          <p class="edu-meta">Knox College — Galesburg, IL · 2024 – June 2028 (expected)</p>
+          <p class="edu-honor">Honors: Dean's List ✦</p>
+          <p class="whisper">Double major energy: two textbooks, zero free weekends, infinite curiosity.</p>
         </div>
-        <div class="event">
-          <h3>Peer Tutor</h3>
-          <p>School number 67, Bishkek, Kyrgyzstan | 2022 - May 2024</p>
-          <p>Provided academic support in Computer Science and Mathematics through both one-on-one tutoring and large classroom assistance.</p>
-          <p>Helped students prepare for exams by breaking down complex concepts into understandable steps and guiding them through problem-solving strategies.</p>
-          <p>Adapted teaching approaches to different learning styles, improving student confidence and performance. Strengthened communication, patience, and instructional skills in a fast-paced academic environment.</p>
-        </div>
-        <div class="event">
-          <h3>Research Participant</h3>
-          <p>University of Chicago, PIMCO Decision Research Lab | March-July 2025</p>
-          <p>Participated in behavioral research studies focused on human decision-making processes.</p>
-          <p>Engaged in structured experiments involving data-driven scenarios and psychological assessments, contributing to ongoing academic research.</p>
-          <p> Gained exposure to research methodologies, experimental design, and the role of data in understanding behavioral patterns.</p>
-        </div>
-        <div class="event">
-          <h3>Track and Field Athlete</h3>
-          <p>Knox College | Jan 2025 - Present</p>
-          <p>Compete as a collegiate track and field athlete specializing in sprinting and horizontal jumps, including the 60m, 100m, 200m, long jump, and triple jump.</p> 
-          <p>Commit to a rigorous training schedule involving daily practices, strength conditioning and technical drills.</p> 
-          <p>Developed discipline, resilience, and time management skills by balancing academics with athletics.</p> 
-          <p>Participate in competitive meets, representing the college in both indoor and outdoor seasons.</p>
-          <div class="track-images">
-            <img src="assets/track1.jpg" alt="Track accomplishment 1" class="track-img" data-src="assets/track1.jpg" />
-            <img src="assets/track2.jpg" alt="Track accomplishment 2" class="track-img" data-src="assets/track2.jpg" />
-            <img src="assets/profile_track.jpg" alt="Track profile" class="track-img" data-src="assets/profile_track.jpg" />
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section class="projects" id="projects">
+      <h2><span class="h-badge">03</span> build log <span class="subtitle">// things I made appear</span></h2>
+      <div class="project-grid">
+
+        <!-- Project 1: Disease Spread Simulation -->
+        <article class="project-card">
+          <div class="project-head">
+            <span class="quest-tag main">⚔ main quest · active</span>
+            <span class="project-date">Jun 2026 – Present</span>
           </div>
-        </div>
-        <div class="event">
-          <h3>Volunteer Tech Tutor</h3>
-          <p>Galesburg Public Library | March 2026 - Present </p>
-          <p>Volunteer as a Tech Tutor providing one-on-one support to help community members navigate technology with confidence.</p>
-          <p>Taught foundational digital skills such as using computers, setting up email accounts, browsing the internet, and applying for jobs online, all within a supportive and pressure-free environment.</p>
-          <p>Focused on making technology more accessible and approachable for individuals of all experience levels.</p>
-        </div>
-        <div class="event">
-          <h3>Hackathon Winner</h3>
-          <p>Augustana College - Hackaugies | April 2026</p>
-          <p>Collaborated in a team to design and develop Mindful Cart, a behavioral finance tool aimed at encouraging more intentional and mindful purchasing decisions.</p> 
-          <p>Contributed to ideation, feature design and implementation under tight time constraints. Worked effectively in a fast-paced, high-pressure environment, rapidly iterating on ideas and translating them into a functional prototype.</p> 
-          <p>Presented the project to judges and peers, earning first place in the fintech track as a first-time hackathon participant.</p>
+          <h3>Regional Disease Spread Simulator</h3>
+          <p class="project-sub">Knox College · Richter Grant 🔬</p>
+          <p>A Python simulation of influenza transmission built on the <strong>SIR epidemiological
+          model</strong> — modeling how disease spreads across interconnected cities using mobility
+          data and configurable travel parameters. Ran parameter-sensitivity experiments to see how
+          regional travel patterns bend the infection curve.</p>
+          <div class="tech-badges">
+            <span class="badge">Python</span>
+            <span class="badge">NumPy</span>
+            <span class="badge">SciPy</span>
+            <span class="badge">Matplotlib</span>
+            <span class="badge">Modeling</span>
+          </div>
+          <div class="project-links">
+            <a class="pill-btn tiny" href="https://github.com/april-hpxd" target="_blank" rel="noopener">⌨ code</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Mindful Cart -->
+        <article class="project-card">
+          <div class="project-head">
+            <span class="quest-tag boss">🏆 boss fight · won</span>
+            <span class="project-date">Apr 2026</span>
+          </div>
+          <h3>Mindful Cart <span class="win-flag">1st place · FinTech</span></h3>
+          <p class="project-sub">HackAugies @ Augustana College 🥇</p>
+          <p>An AI-assisted browser extension that nudges you toward healthier purchasing decisions
+          mid-shopping-spree. Co-built the core functionality with a team of three under a brutal
+          <strong>24-hour</strong> timeline — and somehow won the FinTech track on our first-ever
+          hackathon attempt.</p>
+          <div class="tech-badges">
+            <span class="badge">JavaScript</span>
+            <span class="badge">Browser Extension</span>
+            <span class="badge">AI</span>
+            <span class="badge">Teamwork under fire</span>
+          </div>
           <div class="hack-images">
-            <img src="assets/hack_present.JPG" alt="Hackathon presentation" class="hack-img" data-src="assets/hack_present.JPG" />
-            <img src="assets/hack_steven.jpg" alt="Hackathon with Steven!" class="hack-img" data-src="assets/hack_steven.jpg" />
-            <img src="assets/hack_win.jpg" alt="Hackathon win" class="hack-img" data-src="assets/hack_win.jpg" />
+            <img src="assets/hack_present.JPG" alt="Presenting Mindful Cart to the judges" class="gallery-img" data-src="assets/hack_present.JPG" loading="lazy" decoding="async" width="900" height="600" />
+            <img src="assets/hack_steven.jpg" alt="Team photo at HackAugies" class="gallery-img" data-src="assets/hack_steven.jpg" loading="lazy" decoding="async" width="900" height="600" />
+            <img src="assets/hack_win.jpg" alt="Winning first place" class="gallery-img" data-src="assets/hack_win.jpg" loading="lazy" decoding="async" width="900" height="600" />
+          </div>
+          <div class="project-links">
+            <a class="pill-btn tiny" href="https://github.com/april-hpxd" target="_blank" rel="noopener">⌨ code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================ QUEST LOG (student experience) ============================ -->
+    <section class="quests" id="quests">
+      <h2><span class="h-badge">04</span> quest log <span class="subtitle">// ongoing adventures</span></h2>
+      <div class="timeline">
+
+        <div class="event">
+          <div class="event-head">
+            <h3>Research Participant &amp; Collaborator</h3>
+            <span class="quest-tag side">🔎 side quest · active</span>
+          </div>
+          <p class="event-meta">University of Chicago · PIMCO Decision Research Lab · Mar 2025 – Present</p>
+          <p>Take part in behavioral and decision-making research led by the Roman Family CDR,
+          contributing as both a study subject and collaborator inside real academic research protocols.</p>
+        </div>
+
+        <div class="event">
+          <div class="event-head">
+            <h3>NCAA Track &amp; Field Athlete</h3>
+            <span class="quest-tag endurance">🏃‍♀️ endurance quest · active</span>
+          </div>
+          <p class="event-meta">Knox College · Jan 2025 – Present</p>
+          <p>Compete as a sprint runner in indoor and outdoor collegiate events — all while balancing a
+          double-major course load. Daily practice, strength conditioning, and the ongoing discovery of
+          exactly how many hours are (not) in a day.</p>
+          <div class="track-images">
+            <img src="assets/track1.jpg" alt="Track meet moment" class="gallery-img" data-src="assets/track1.jpg" loading="lazy" decoding="async" width="900" height="600" />
+            <img src="assets/track2.jpg" alt="Sprinting at a competition" class="gallery-img" data-src="assets/track2.jpg" loading="lazy" decoding="async" width="900" height="600" />
+            <img src="assets/profile_track.jpg" alt="Track team portrait" class="gallery-img" data-src="assets/profile_track.jpg" loading="lazy" decoding="async" width="900" height="600" />
           </div>
         </div>
+
       </div>
     </section>
 
-    <section class="professional">
-      <h2>Professional Development</h2>
+    <!-- ============================ WORK HISTORY (professional development) ============================ -->
+    <section class="work" id="work">
+      <h2><span class="h-badge">05</span> completed missions <span class="subtitle">// work history</span></h2>
       <div class="timeline">
+
         <div class="event">
-          <h3>Banking Operations Intern</h3>
-          <p>MBANK, Bishkek, Kyrgyzstan | June-August 2023</p>
-          <p>Supported daily banking operations by assisting customers with inquiries and guiding them through basic services.</p> 
-          <p>Organized and maintained important documents, ensuring accuracy and efficiency in record-keeping.</p> 
-          <p>Assisted in preparing promotional and informational materials for clients. Gained insight into financial systems, customer service, and professional workplace communication.</p>
+          <div class="event-head">
+            <h3>Teaching Assistant — Intro to Computer Science</h3>
+            <span class="quest-tag done">✓ mission complete</span>
+          </div>
+          <p class="event-meta">Knox College · CS Department · Jan 2026 – Mar 2026</p>
+          <p>Ran weekly office hours, backed up lab sessions (debugging code, answering the "why won't
+          it run" questions, guiding assignments), and graded homework with detailed feedback for a
+          class of <strong>42 students</strong>.</p>
         </div>
+
         <div class="event">
-          <h3>Substitute Teacher</h3>
-          <p>School number 67, Bishkek, Kyrgyzstan | 2022 - June 2024</p>
-          <p>Led English and Algebra classes for groups of up to 40+ students, maintaining classroom structure and engagement in the absence of the primary teacher.</p>
-          <p>Designed interactive activities and educational games to reinforce learning and keep students motivated. Managed classroom behavior and adapted lesson delivery to meet diverse student needs.</p>
-          <p>Built strong leadership and adaptability skills in a dynamic environment.</p>
+          <div class="event-head">
+            <h3>Substitute Teacher</h3>
+            <span class="quest-tag done">✓ mission complete</span>
+          </div>
+          <p class="event-meta">School №67 · Bishkek, Kyrgyzstan · 2022 – June 2024</p>
+          <p>Led English and Algebra classes of up to <strong>43 students</strong>, inventing games and
+          activities to make learning stick, and building genuine mentorship connections with younger
+          students. (Crowd control: unlocked.)</p>
         </div>
+
         <div class="event">
-          <h3>Delivery Courier</h3>
-          <p>Glovo, Bishkek, Kyrgyzstan | 2023 - July 2024</p>
-          <p>Provided reliable and efficient delivery services while maintaining a 4.87/5.00 customer rating.</p> 
-          <p>Demonstrated strong time management, navigation, and communication skills to ensure timely and accurate deliveries.</p> 
-          <p>Handled customer interactions professionally, resolving issues and maintaining high service standards in a fast-paced environment.</p>
+          <div class="event-head">
+            <h3>Banking Operations Intern</h3>
+            <span class="quest-tag done">✓ mission complete</span>
+          </div>
+          <p class="event-meta">MBANK · Bishkek, Kyrgyzstan · Jun 2023 – Aug 2023</p>
+          <p>Greeted and directed customers to the right service desks, supported branch staff with
+          filing, scanning, and organizing documents, and helped prep promotional materials for new
+          banking products.</p>
         </div>
-        <div class="event">
-          <h3>Home Renovation Assistant</h3>
-          <p>Bishkek, Kyrgyzstan | 2019 - 2021</p>
-          <p>Assisted in various home renovation projects, including wall preparation, painting, wallpapering, and minor appliance repairs.</p> 
-          <p>Developed practical problem-solving skills and attention to detail while working with tools and materials.</p> 
-          <p>Gained hands-on experience in maintaining and improving living spaces.</p>
+
+      </div>
+    </section>
+
+    <!-- ============================ SKILLS (RPG inventory) ============================ -->
+    <section class="skills" id="skills">
+      <h2><span class="h-badge">06</span> inventory <span class="subtitle">// equipped skills</span></h2>
+
+      <div class="skill-group">
+        <h3 class="skill-cat">⌨ Languages</h3>
+        <div class="cards">
+          <div class="card" data-lvl="Lv.9">Python</div>
+          <div class="card" data-lvl="Lv.7">Java</div>
+          <div class="card" data-lvl="Lv.6">C++</div>
+          <div class="card" data-lvl="Lv.6">SQL</div>
+          <div class="card" data-lvl="Lv.7">JavaScript</div>
+          <div class="card" data-lvl="Lv.6">React</div>
         </div>
-        <div class="event">
-          <h3>Photographer Assistant</h3>
-          <p>Real Image Corporation, Bishkek, Kyrgyzstan | 2023 - 2024</p>
-          <p>Assisted in studio operations by preparing equipment, maintaining organization, and supporting customer interactions.</p>
-          <p>Sold an average of 75–90 photo frames daily, demonstrating strong communication and sales skills.</p> 
-          <p>Contributed to photo enhancement and presentation, ensuring high-quality final products for clients.</p>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-cat">🧰 Frameworks &amp; Tools</h3>
+        <div class="cards">
+          <div class="card">NumPy</div>
+          <div class="card">SciPy</div>
+          <div class="card">Matplotlib</div>
+          <div class="card">Git &amp; GitHub</div>
+          <div class="card">Linux</div>
+          <div class="card">Docker</div>
+          <div class="card">VS Code</div>
+          <div class="card">IntelliJ IDEA</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-cat">🧠 Concepts</h3>
+        <div class="cards">
+          <div class="card">Algorithms</div>
+          <div class="card">Data Structures</div>
+          <div class="card">OOP</div>
+          <div class="card">Software Engineering</div>
+          <div class="card">Data Analysis</div>
+          <div class="card">Version Control</div>
+          <div class="card">Computational Modeling</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-cat">✦ Bonus Stats</h3>
+        <div class="cards">
+          <div class="card bonus">Russian 🗣️</div>
+          <div class="card bonus">Kyrgyz 🗣️</div>
+          <div class="card bonus">English 🗣️</div>
+          <div class="card bonus">Molecular Biology 🧬</div>
+          <div class="card bonus">Sprinting 🏃‍♀️</div>
+          <div class="card bonus">Teaching 📚</div>
         </div>
       </div>
     </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="cards">
-        <div class="card">Python</div>
-        <div class="card">Java</div>
-        <div class="card">Haskell</div>
-        <div class="card">Algorithms</div>
-        <div class="card">Data Structures</div>
-        <div class="card">Web Development</div>
-        <div class="card">Machine Learning</div>
-        <div class="card">Database Management</div>
-        <div class="card">Version Control (Git)</div>
-        <div class="card">Molecular Biology</div>
-        <div class="card">Genetics</div>
-        <div class="card">Cell Biology</div>
-        <div class="card">Research Methods</div>
-        <div class="card">Data Analysis</div>
-        <div class="card">Work Etiquette</div>
-        <div class="card">Google Workspace</div>
-        <div class="card">Microsoft Office</div>
-        <div class="card">Peer Mentorship</div>
-        <div class="card">Russian</div>
-        <div class="card">Kyrgyz</div>
+    <!-- ============================ RANDOM LORE / SIDE QUESTS ============================ -->
+    <section class="lore" id="lore">
+      <h2><span class="h-badge">07</span> random lore <span class="subtitle">// patch notes &amp; side quests</span></h2>
+
+      <!-- The campus job story, RPG-style -->
+      <div class="patch-note featured">
+        <div class="patch-head">
+          <span class="patch-ver">v2026.fall</span>
+          <span class="achievement">🏅 ACHIEVEMENT UNLOCKED</span>
+        </div>
+        <h3>"Triple Threat"</h3>
+        <p>Went job hunting on campus. Somehow aggro'd <strong>three job offers at once.</strong> 🎯</p>
+        <p>Survived the unexpectedly difficult boss battle titled <em>"Choosing"</em> (no walkthrough
+        exists) and equipped two roles:</p>
+        <ul class="quest-rewards">
+          <li>🩹 <strong>Sports Medicine Student Worker</strong></li>
+          <li>🎭 <strong>Theatre Department Secretary</strong></li>
+        </ul>
+        <p class="whisper">Reward: résumé XP, questionable sleep schedule, and an even better campus map.</p>
+      </div>
+
+      <!-- Older gigs reframed as flavor lore -->
+      <div class="lore-grid">
+        <div class="lore-card">
+          <span class="lore-tier">achievement · past life</span>
+          <h4>🛵 Certified Speedrunner</h4>
+          <p>Delivery courier @ Glovo. Held a <strong>4.87/5.00</strong> rating — basically an S-rank.</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tier">achievement · past life</span>
+          <h4>🛠️ Home Renovation Arc</h4>
+          <p>Painting, wallpapering, minor appliance repair. Turns out debugging walls is also a thing.</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tier">achievement · past life</span>
+          <h4>📸 Frame Merchant</h4>
+          <p>Photographer's assistant — sold 75–90 photo frames a day. Peak persuasion stats.</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tier">achievement · past life</span>
+          <h4>🌱 Community Builder</h4>
+          <p>Volunteer tech tutor &amp; ecology lecturer. Making scary tech feel friendly since 2022.</p>
+        </div>
+      </div>
+
+      <!-- tasteful meme placeholders for Altynai to fill in later -->
+      <div class="meme-shelf">
+        <p class="shelf-label">✂ meme shelf (reserved for future chaos)</p>
+        <div class="meme-grid">
+          <div class="meme-slot"><span>[ programmer meme goes here ]</span></div>
+          <div class="meme-slot"><span>[ cat reaction GIF ]</span></div>
+          <div class="meme-slot"><span>[ academic suffering meme ]</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>Phone: (929)-454-4343</p>
-      <p>Email: aruslanova@knox.edu</p>
-      <p><a href="https://github.com/april-hpxd" target="_blank">GitHub</a></p>
-      <p><a href="https://www.linkedin.com/in/altynai-ruslanova-987730273/" target="_blank">LinkedIn</a></p>
+    <!-- ============================ CONTACT ============================ -->
+    <section class="contact" id="contact">
+      <h2><span class="h-badge">08</span> say hi <span class="subtitle">// press start</span></h2>
+      <p class="contact-intro">Recruiter, classmate, or someone who also can't stop starting new
+      projects — my inbox is open. I don't bite (unless it's a merge conflict).</p>
+      <div class="contact-links">
+        <a class="contact-btn" href="mailto:aruslanova@knox.edu">✉ aruslanova@knox.edu</a>
+        <a class="contact-btn" href="mailto:ruslanovaltynaii@gmail.com">✉ ruslanovaltynaii@gmail.com</a>
+        <a class="contact-btn" href="tel:+19294544343">☎ (929) 454-4343</a>
+        <a class="contact-btn" href="https://github.com/april-hpxd" target="_blank" rel="noopener">⌨ GitHub</a>
+        <a class="contact-btn" href="https://www.linkedin.com/in/altynai-ruslanova-987730273/" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+      <p class="footer-note">handmade with ♥, too much coffee, and zero templates · psst — try the
+      <span class="hint">↑↑↓↓←→←→BA</span> ✦</p>
     </section>
   </main>
 
-  <!-- Modal for track images -->
-  <div id="image-modal" class="modal">
-    <img id="modal-image" class="modal-content" />
-  </div>
+  <!-- side profile peeking sprite (kept from original, now optimized) -->
+  <img src="assets/profile_side.png" alt="" aria-hidden="true" class="side-profile" width="600" height="900" loading="lazy" decoding="async" />
 
+  <!-- achievement toast (populated by JS) -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Modal for gallery images -->
+  <div id="image-modal" class="modal" role="dialog" aria-modal="true" aria-label="Enlarged image">
+    <span class="modal-close" aria-hidden="true">✕</span>
+    <img id="modal-image" class="modal-content" alt="Enlarged view" />
+  </div>
 
   <script src="script.js"></script>
 </body>

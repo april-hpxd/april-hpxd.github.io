@@ -4,16 +4,25 @@ Source code: https://github.com/april-hpxd/april-hpxd.github.io
 Live Site: https://april-hpxd.github.io
 
 ### Overview
-This is my personal portfolio website built from scratch using HTML, CSS and JavaScript. 
+This is my personal portfolio website built from scratch using HTML, CSS and JavaScript.
 It is my space to present my projects, skills and experience in a way that reflects my personality and design style.
 
-All the visual components are hand-drawn and intentionally lean toward a quirky and slightly chaotic aesthetic.
+The site leans into a cozy / indie / slightly-chaotic aesthetic — think RPG quest log meets
+programmer's notebook. Sections include an About/whoami terminal, a Build Log (projects), a
+Quest Log (experience), an Inventory (skills), Random Lore (side quests + patch notes), and Contact.
+
+There are a few hidden easter eggs — try the Konami code (↑↑↓↓←→←→BA), open the console, or
+click the little me in the corner.
 
 ### Tech Stack
 HTML5
-CSS3 (custom animations, layout, styling)
-JavaScript (DOM manipulation, scroll animations)
+CSS3 (custom properties, animations, responsive layout, `prefers-reduced-motion` support)
+JavaScript (scroll reveal, image modal, custom cursor, easter eggs — no dependencies)
 GitHub Pages (deployment)
+
+### Assets
+Images are pre-optimized for the web (large photos downscaled + compressed, ~37 MB → ~1 MB total)
+and lazy-loaded. Decorative sprites/doodles are lightweight GIFs and emoji.
 
 ### Deployment
 This site is deployed using GitHub Pages.
@@ -21,10 +30,11 @@ This site is deployed using GitHub Pages.
 To run locally:
 
 git clone https://github.com/april-hpxd/april-hpxd.github.io
-cd april-hpxd.github.io/frontend
-open index.html
+cd april-hpxd.github.io
+# just open index.html in a browser, or serve it:
+npx http-server . -p 4321
 
-(the backend folder is not required for deployment)
+(the backend folder is optional and not required for deployment)
 
 ### Future Improvements
 
